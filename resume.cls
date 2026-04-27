@@ -189,10 +189,15 @@
 
 \newcommand{\birthday}[1]{\basicInfoItem{\faiconsixbf{cake-candles}}{#1}}
 
+\newcommand{\gift}[1]{\basicInfoItem{\faiconsixbf{gift}}{#1}}
+
 \newcommand{\hometown}[1]{\basicInfoItem{\faiconsixbf{house}}{#1}}
 
 \newcommand{\boy}{\basicInfoItem{\faiconsixbf{mars}}{男}}
 \newcommand{\girl}{\basicInfoItem{\faiconsixbf{venus}}{女}}
+
+\newcommand{\mars}{\basicInfoItem{\faiconsixbf{mars}}}
+\newcommand{\venus}{\basicInfoItem{\faiconsixbf{venus}}}
 
 % defines one's linkedin
 % usage: \linkedin{<linkedin>}
