@@ -1,3 +1,19 @@
+## 对原项目的修改
+
+### 添加了resume_en.tex header_en.tex sections_en.tex等英文版本的文件，方便使用英文简历
+
+### Makefile
+
+- 调整了中英文名称
+
+### resume.cls
+
+- 添加`\newcommand{\gift}[1]{\basicInfoItem{\faiconsixbf{gift}}{#1}}`，用于礼物图标
+- 添加`\newcommand{\mars}{\basicInfoItem{\faiconsixbf{mars}}}`，用于性别图标，不再于命令中包含文字性别描述，可以在使用时自行添加中文或英文
+- 添加`\newcommand{\venus}{\basicInfoItem{\faiconsixbf{venus}}}`，同上
+
+## 原REAME
+
 本仓库 Fork 自 [billryan/resume: An elegant \LaTeX\ résumé template.](https://github.com/billryan/resume)
 
 原仓库已经多年没有更新了，我在使用其中文版本的时候遇到一些新的需求，也即本仓库所做的主要修改：
@@ -12,10 +28,10 @@
 使用：
 `make zh_CN`
 
-## 效果图
+### 效果图
 ![效果图](./images/resume_example.jpg)
 
-## 支持 FontAwesome 6.6.0
+### 支持 FontAwesome 6.6.0
 
 - 目前直接在 [Font Awesome 官网](https://fontawesome.com/search) 已经无法直接搜索 4.6.3 版本的 icon 了，默认是搜索 6.6.0 版本的 icon
 - `./stys/create_fontawesome_sty.py` 源于此仓库：[gvgramazio/latex-fontawesome6: Bindings for FontAwesome 6 icons to be used in XeLaTeX.](https://github.com/gvgramazio/latex-fontawesome6)，在此基础上改了一些东西，这里其实还可以继续优化一下
@@ -29,7 +45,7 @@
 2. 根据搜索结果，找到对应 icon 的名字，比如 thumbs-up
 3. 根据版本（Free/Brand or Pro）以及样式（是否 Solid），决定最终的代码，比如 `\faiconsixbf{thumbs-up}`（Free Solid）, `\faiconsix{thumbs-up}`（Free Regular）
 
-## 修改了带图片的简历样式
+### 修改了带图片的简历样式
 通过在 `resume-zh_CN.tex` 中指定：
 - `\input{texs/header_with_photo}`
 - `\input{texs/header}`
@@ -48,7 +64,7 @@
 
 具体的颜色和样式可调，需要修改 `resume.cls` 文件
 
-## 其他修改
+### 其他修改
 - 支持定义高亮色 `accentcolor`，命令 `\texthl{}`
 - 优化 PDF 目录生成：解决了乱码的问题，新增了 bookmark
 - 优化仓库文件组织结构
