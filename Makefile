@@ -4,11 +4,11 @@ PDFS = $(SRC:.tex=.pdf)
 
 all: clean pdf
 
-en: clean
+en: clean_en
 	mkdir -p build
 	xelatex -output-directory=build resume_en.tex
 
-zh_CN: clean
+zh_CN: clean_zh_CN
 	mkdir -p build
 	xelatex -output-directory=build resume.tex 
 
@@ -34,3 +34,9 @@ endif
 clean:
 	# $(RM) *.log *.aux *.bbl *.blg *.synctex.gz *.out *.toc *.lof *.idx *.ilg *.ind *.pdf
 	$(RM) build/*
+
+clean_en:
+	$(RM) resume_en.pdf
+
+clean_zh_CN:
+	$(RM) resume.pdf
