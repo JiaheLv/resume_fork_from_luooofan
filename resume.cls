@@ -67,6 +67,10 @@
   \ifthenelse{\equal{\titlelinestyle}{default}}{%
     \colorlet{fgcolor}{nwpubluebg} %
     \colorlet{accentcolor}{nwpubluebg} %
+
+    % \colorlet{fgcolor}{black} %
+    % \colorlet{accentcolor}{black} %
+
     \titleformat{\section}         % Customise the \section command 
       {\Large\bfseries\raggedright\color{fgcolor}} % Make the \section headers large (\Large),
                                    % small capitals (\scshape) -> bold font (\bfseries),
