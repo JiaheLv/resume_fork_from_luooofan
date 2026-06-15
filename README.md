@@ -1,4 +1,10 @@
+# resume_fork_from_luooofan
+
 ## 对原项目的修改
+
+### `default`样式修改
+
+注释 `resume.cls` 68-69行，使用 `resume.cls` 71-72行的样式，标题行有下划线，无背景色，标题和下划线同色为黑色
 
 ### 添加了resume_en.tex header_en.tex sections_en.tex等英文版本的文件，方便使用英文简历
 
@@ -17,6 +23,7 @@
 本仓库 Fork 自 [billryan/resume: An elegant \LaTeX\ résumé template.](https://github.com/billryan/resume)
 
 原仓库已经多年没有更新了，我在使用其中文版本的时候遇到一些新的需求，也即本仓库所做的主要修改：
+
 - 支持 FontAwesome 6.6.0，新增几个基本信息
 - 修改了带图片的简历样式
 - 支持了多种标题行样式
@@ -29,6 +36,7 @@
 `make zh_CN`
 
 ### 效果图
+
 ![效果图](./images/resume_example.jpg)
 
 ### 支持 FontAwesome 6.6.0
@@ -41,12 +49,15 @@
 目前已经提供了简历所需的大部分 icon，但也可以修改或新增
 
 使用：
+
 1. 在 [Font Awesome Search](https://fontawesome.com/search) 搜索你想要的 icon，比如 thumbs
 2. 根据搜索结果，找到对应 icon 的名字，比如 thumbs-up
 3. 根据版本（Free/Brand or Pro）以及样式（是否 Solid），决定最终的代码，比如 `\faiconsixbf{thumbs-up}`（Free Solid）, `\faiconsix{thumbs-up}`（Free Regular）
 
 ### 修改了带图片的简历样式
+
 通过在 `resume-zh_CN.tex` 中指定：
+
 - `\input{texs/header_with_photo}`
 - `\input{texs/header}`
 
@@ -55,9 +66,11 @@
 使用了 [tabularray](https://github.com/lvjr/tabularray) 包，要求 TexLive2021 及以上的版本
 
 ## 支持了多种标题行样式
+
 通过 `resume-zh_CN.tex` 中的 `\settitlelinestyle{default}` 进行设置
 
 三种：
+
 1. `default`：标题行有下划线，无背景色，标题和下划线同色 `fgcolor`
 2. `partialbg`：标题行有下划线，标题内容部分有背景色 `bgcolor`，标题和下划线同色 `fgcolor`
 3. `fullbg`：标题行无下划线，标题行背景色 `bgcolor`，标题 `fgcolor`
@@ -65,6 +78,7 @@
 具体的颜色和样式可调，需要修改 `resume.cls` 文件
 
 ### 其他修改
+
 - 支持定义高亮色 `accentcolor`，命令 `\texthl{}`
 - 优化 PDF 目录生成：解决了乱码的问题，新增了 bookmark
 - 优化仓库文件组织结构
@@ -147,7 +161,7 @@ xelatex resume-zh_CN.tex % 编译中文简历
 
 ### 中英文切换
 
-英文模板范例见 <https://github.com/billryan/resume/blob/zh_CN/resume.tex> 
+英文模板范例见 <https://github.com/billryan/resume/blob/zh_CN/resume.tex>
 中文模板范例见 <https://github.com/billryan/resume/blob/zh_CN/resume-zh_CN.tex>
 
 中文模板与英文模板的区别仅有两行——使用中文时仅需反注释以下两行，模板中已默认启用，第一次编译时耗时相对较长(引入了外部中文字型)，耐心等待下。
