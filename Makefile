@@ -2,7 +2,7 @@ SRC = $(wildcard *.tex)
 
 PDFS = $(SRC:.tex=.pdf)
 
-all: clean pdf
+all: en zh_CN
 
 en: clean_en
 	mkdir -p build
@@ -13,10 +13,7 @@ zh_CN: clean_zh_CN
 	xelatex -output-directory=build resume.tex 
 
 	# UNCOMMENT the 2 lines below if you want to use bibliographic references
-	# bibtex build/resume-zh_CN
-	# xelatex -output-directory=build resume-zh_CN.tex 
-
-	xelatex -output-directory=build resume.tex 
+	# bibtex build/resume
 
 pdf: clean $(PDFS)
 
@@ -31,12 +28,16 @@ else
 	RM = rm -f
 endif
 
-clean:
+clean_all:
 	# $(RM) *.log *.aux *.bbl *.blg *.synctex.gz *.out *.toc *.lof *.idx *.ilg *.ind *.pdf
 	$(RM) build/*
 
 clean_en:
-	$(RM) resume_en.pdf
+	$(RM) build/resume_en.log
+	$(RM) build/resume_en.aux
+	$(RM) build/resume_en.pdf
 
 clean_zh_CN:
-	$(RM) resume.pdf
+	$(RM) build/resume.log
+	$(RM) build/resume.aux
+	$(RM) build/resume.pdf
